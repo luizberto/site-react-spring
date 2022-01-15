@@ -1,6 +1,7 @@
 package com.luizberto.minhasfinancas.service;
 
 import com.luizberto.minhasfinancas.enums.StatusLancamento;
+import com.luizberto.minhasfinancas.enums.TipoLancamento;
 import com.luizberto.minhasfinancas.exceptions.RegraNegocioExeption;
 import com.luizberto.minhasfinancas.modelentity.Lancamento;
 import com.luizberto.minhasfinancas.repository.LancamentoRepository;
@@ -13,6 +14,7 @@ import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class LancamentoServiceImpl implements LancamentoService{
@@ -87,6 +89,28 @@ public class LancamentoServiceImpl implements LancamentoService{
         if(lancamento.getTipo() == null){
             throw new RegraNegocioExeption("informe um tipo de transferencia valido");
         }
+    }
+
+    @Override
+    public Optional<Lancamento> obterPorId(Long id) {
+        return repository.findById(id);
+    }
+
+    @Override
+    @Transactional
+    public BigDecimal obterSaldoPorUsuario(Long id) {
+        BigDecimal receitas = repository.obterSaldoPorTipoLancamentoEUsuario(id, TipoLancamento.RECEITA);
+        BigDecimal despesa = repository.obterSaldoPorTipoLancamentoEUsuario(id, TipoLancamento.DESPESA);
+
+        if (receitas == null){
+            receitas = BigDecimal.ZERO;
+        }
+
+        if (despesa == null){
+            despesa = BigDecimal.ZERO;
+        }
+
+        return receitas.subtract(despesa);
     }
 
 
