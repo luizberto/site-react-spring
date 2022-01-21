@@ -27,23 +27,24 @@ class Login extends React.Component{
                                             <fieldset>
                                                 <FormGroup label = "Email: " htmlFor = "exampleInputEmail">
                                                 <input type="email" value={this.state.email}
-                                                onChange={e => this.setState({email: e.target.value})}
+                                                 onChange={e => this.setState({email: e.target.value})}
                                                  class="form-control" id="exampleInputEmail1" 
                                                  aria-describedby="emailHelp" 
-                                                placeholder="Digite o Email"/>
+                                                 placeholder="Digite o Email"/>
                                                 </FormGroup>
 
                                                 <FormGroup label = "senha" htmlFor = "exampleInputPassword1">
                                                 <input type="password"  value={this.state.senha} 
-                                                onChange={e => this.setState({senha: e.target.value})}    class="form-control" 
-                                                id="exampleInputPassword1" placeholder="Password"/>
+                                                onChange={e => this.setState({senha: e.target.value})} 
+                                                class="form-control" 
+                                                id="exampleInputPassword1" 
+                                                placeholder="Password"/>
                                                 </FormGroup>
 
                                                 <button onClick={this.entrar} className="btn btn-success">Entrar</button>
                                                 <button className = "btn btn-danger">Cadastrar</button>
                                             </fieldset>
                                         </div>
-
                                     </div>
                                 </div>
                             </Card>
