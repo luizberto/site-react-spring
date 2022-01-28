@@ -1697,6 +1697,13 @@
     "jest-diff" "^27.0.0"
     "pretty-format" "^27.0.0"
 
+"@types/jquery@*":
+  "integrity" "sha512-ZxJrup8nz/ZxcU0vantG+TPdboMhB24jad2uSap50zE7Q9rUeYlCF25kFMSmHR33qoeOgqcdHEp3roaookC0Sg=="
+  "resolved" "https://registry.npmjs.org/@types/jquery/-/jquery-3.5.13.tgz"
+  "version" "3.5.13"
+  dependencies:
+    "@types/sizzle" "*"
+
 "@types/json-schema@*", "@types/json-schema@^7.0.4", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
   "integrity" "sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ=="
   "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.9.tgz"
@@ -1769,6 +1776,11 @@
     "@types/mime" "^1"
     "@types/node" "*"
 
+"@types/sizzle@*":
+  "integrity" "sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ=="
+  "resolved" "https://registry.npmjs.org/@types/sizzle/-/sizzle-2.3.3.tgz"
+  "version" "2.3.3"
+
 "@types/sockjs@^0.3.33":
   "integrity" "sha512-f0KEEe05NvUnat+boPTZ0dgaLZ4SfSouXUgv5noUiefG2ajgKjmETo9ZJyuqsl7dfl2aHlLJUiki6B4ZYldiiw=="
   "resolved" "https://registry.npmjs.org/@types/sockjs/-/sockjs-0.3.33.tgz"
@@ -1787,6 +1799,13 @@
   "version" "5.14.2"
   dependencies:
     "@types/jest" "*"
+
+"@types/toastr@^2.1.39":
+  "integrity" "sha512-jgbMLTjj7dsSY/EYYOoZXhK6OY/bR909Bn6YNnwL3Oq+f0AeFKbYa198XU/6bsmUqqCCWw5VvCi11FDN1/fetw=="
+  "resolved" "https://registry.npmjs.org/@types/toastr/-/toastr-2.1.39.tgz"
+  "version" "2.1.39"
+  dependencies:
+    "@types/jquery" "*"
 
 "@types/trusted-types@^2.0.2":
   "integrity" "sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg=="
@@ -5563,6 +5582,11 @@
     "import-local" "^3.0.2"
     "jest-cli" "^27.4.7"
 
+"jquery@>=1.12.0":
+  "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
+  "version" "3.6.0"
+
 "js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
   "resolved" "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
@@ -8352,6 +8376,13 @@
   "version" "5.0.1"
   dependencies:
     "is-number" "^7.0.0"
+
+"toastr@^2.1.4":
+  "integrity" "sha1-i0O+ZPudDEFIcURvLbjoyk6V8YE="
+  "resolved" "https://registry.npmjs.org/toastr/-/toastr-2.1.4.tgz"
+  "version" "2.1.4"
+  dependencies:
+    "jquery" ">=1.12.0"
 
 "toidentifier@1.0.1":
   "integrity" "sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA=="
