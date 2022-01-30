@@ -28,13 +28,17 @@ export default class LancamentosServices extends ApiService{
     obterListaTipos(){
         return[
             {label: 'Selecione', value:''},
-            {label: 'receita', value: 'RECEITA  '},
+            {label: 'receita', value: 'RECEITA'},
             {label: 'despesa', value: 'DESPESA'}
         ]
     }
 
     obterPorId(id){
         return this.get(`/${id}`)
+    }
+
+    alterarStatus(id, status){
+        return this.put(`/${id}/atualiza-status`, {status})
     }
 
     validar(lancamento){
