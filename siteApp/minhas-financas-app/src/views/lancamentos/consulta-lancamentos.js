@@ -55,7 +55,7 @@ class ConsultaLancamentos extends React.Component{
 
 
     editar = (id) => {
-        console.log('editando o  lançamento',id)
+        this.props.history.push(`/cadastro-lancamento/${id}`)
     }
 
 
@@ -82,7 +82,9 @@ class ConsultaLancamentos extends React.Component{
         })
     }
 
-    
+    preparaFormularioCadastro = () => {
+        this.props.history.push('/cadastro-lancamento')
+    }
 
     render(){
 
@@ -138,10 +140,8 @@ class ConsultaLancamentos extends React.Component{
                                 lista = {tipos}/>                          
                             </FormGroup>
 
-                            
-
                             <button onClick={this.buscar} type="button" className="btn btn-success">Buscar</button>
-                            <button type="button" className="btn btn-danger">Cadastrar</button>
+                            <button onClick={this.preparaFormularioCadastro} type="button" className="btn btn-danger">Cadastrar</button>
 
                         </div>
 
@@ -172,4 +172,4 @@ class ConsultaLancamentos extends React.Component{
         );
     }
 }
-export default ConsultaLancamentos;
+export default withRouter(ConsultaLancamentos);

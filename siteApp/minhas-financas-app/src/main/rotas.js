@@ -5,6 +5,7 @@ import CadastroUsuario from "../views/cadastroUsuario";
 import Login from "../views/login";
 import Home from "../views/home";
 import ConsultaLancamentos from "../views/lancamentos/consulta-lancamentos";
+import CadastroLancamentos from "../views/lancamentos/cadastro-lancamentos";
 
 function Rotas(){
     return(
@@ -14,6 +15,7 @@ function Rotas(){
                <Route path="/cadastro-usuarios" component = {CadastroUsuario}/> 
                <Route path="/home" component={Home}  />
                <Route path="/consulta-lancamentos" component={ConsultaLancamentos}/>
+               <Route path="/cadastro-lancamento/:id?" component = {CadastroLancamentos}/>
             </Switch>
         </HashRouter>
 

@@ -25,7 +25,6 @@ public class UsuarioController {
 
      @PostMapping
     public ResponseEntity salvar(@RequestBody UsuarioDTO dto){
-
         Usuario usuario = Usuario.builder().nome(dto.getNome()).email(dto.getEmail())
                 .senha(dto.getSenha()).build();
 
